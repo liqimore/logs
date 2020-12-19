@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3752067843889894",
+          enable_page_level_ads: true
+     });
+</script>
+ <!-- comments -->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+
+{% seo %}
+<meta name="keywords" content="{% if site.author.username %}{{ site.author.username }},{% endif %}{% if page.tags != null %}{{ page.tags | join: ',' }}{% else %}{{ site.blog.keywords }}{% endif %}" />
+
+{% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="5; url={{ site.paths.blog | relative_url }}">
+{% endif %}
+
+{% if page.indexing == false %}
+    <meta name="robots" content="noindex">
+{% endif %}
+
+{% feed_meta %}
