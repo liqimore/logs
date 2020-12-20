@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     $(document).ready(function () {
         var disqusPublicKey = "{{ site.disqus.public_key }}";
         var disqusShortname = "{{ site.disqus.shortname }}";
@@ -22,36 +22,51 @@
             }
         });
 
-//         $('.comments .show-hidden').on('click', function () {
-//             $.ajaxSetup({cache: true});
-//             $.getScript('//' + disqusShortname + '.disqus.com/embed.js');
-//             $.ajaxSetup({cache: false});
-//             $(this).remove();
-//         });
-        
-        //auto load comments
-        $.ajaxSetup({cache: true});
+        $('.comments .show-hidden').on('click', function () {
+            $.ajaxSetup({cache: true});
             $.getScript('//' + disqusShortname + '.disqus.com/embed.js');
             $.ajaxSetup({cache: false});
             $(this).remove();
+        });
+        
+        //auto load comments
+        // $.ajaxSetup({cache: true});
+        //     $.getScript('//' + disqusShortname + '.disqus.com/embed.js');
+        //     $.ajaxSetup({cache: false});
+        //     $(this).remove();
         
 
         if (/\#comments/.test(location.hash)) {
             $('.comments .show-hidden').trigger('click');
         }
     });
-</script>
+</script> -->
 
-<!--  <div id="vcomments"></div>
+ <!-- <div id="vcomments"></div> -->
+ <div id="disqus_thread"></div>
     <script>
         new Valine({
             el: '#vcomments',
-            appId: 'r1IBpQSjEtLFpk74nqd8VY52-gzGzoHsz',
-            appKey: 'pKx1crhC38RofYuQtDU367g6',
+            appId: 'pyWhzTo9N1oGroPrh7paaLtw-MdYXbMMI',
+            appKey: 'fLUSdo8hpeGnTgEYDbnpek6m',
             placeholder: 'You have something to say?',
             notify: true,
             verify: true,
             lang: 'en',
             visitor: true
         })
-    </script> -->
+    </script>
+<script>
+    var dsqjs = new DisqusJS({
+        shortname: 'liqimoreblog',
+        siteName: "Ricky's Blog",
+        identifier: '',
+        url: '',
+        title: '',
+        // api: 'https://disqus.liqitry.workers.dev/api/',
+        apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
+        admin: 'liqimore',
+        adminLabel: 'Admin',
+        nesting: 6
+    });
+    </script>
