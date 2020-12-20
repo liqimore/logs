@@ -87,13 +87,11 @@ layout: blog
                                 document.getElementById("showComment").dispatchEvent(evt);
                                 document.getElementById("showComment").style.display = "none";
 
-                                var urlnow;
-                                url = window.location.href;
                                 var dsqjs = new DisqusJS({
                                     shortname: 'liqimoreblog',
                                     siteName: "Ricky's Blog",
-                                    identifier: urlnow,
-                                    url: urlnow,
+                                    identifier: "{{ page.url | absolute_url }}",
+                                    url: "{{ page.url | absolute_url }}",
                                     apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
                                     admin: 'liqimore',
                                     adminLabel: 'Admin'
