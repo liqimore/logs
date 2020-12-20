@@ -77,8 +77,30 @@ layout: blog
                 {% if site.disqus.shortname and page.comments != false %}
                     {% include common/disqus.html %}
                     <div class="comments">
-                        <!-- <button class="center-block show-hidden" title="{{ site.data.i18n[site.lang].show_comments }}" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button> -->
-                        <!-- <div id="disqus_thread"></div> -->
+                        <button id="showComment" onclick="showcomments()" class="center-block show-hidden" title="{{ site.data.i18n[site.lang].show_comments }}" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
+                        <div id="disqus_thread"></div>
+                        <!-- disqusjs reverse proxy -->
+                        <script>
+                            function showcomments(){
+                                var evt = document.createEvent("MouseEvents"); 
+                                    evt.initEvent("click", true, true); 
+                                    document.getElementById("showComment").dispatchEvent(evt); 
+                                    document.getElementById("showComment").style.display = "none";
+
+                            var dsqjs = new DisqusJS({
+                                shortname: 'liqimoreblog',
+                                siteName: "Ricky's Blog",
+                                // identifier: '',
+                                // url: '',
+                                title: '',
+                                // api: 'https://disqus.liqitry.workers.dev/api/',
+                                apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
+                                admin: 'liqimore',
+                                adminLabel: 'Admin',
+                                nesting: 6
+                            });
+                        }
+                            </script>
                     </div>
                 {% endif %}
             </div>
