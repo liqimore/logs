@@ -81,26 +81,25 @@ layout: blog
                         <div id="disqus_thread"></div>
                         <!-- disqusjs reverse proxy -->
                         <script>
-                            function showcomments(){
-                                var evt = document.createEvent("MouseEvents"); 
-                                    evt.initEvent("click", true, true); 
-                                    document.getElementById("showComment").dispatchEvent(evt); 
-                                    document.getElementById("showComment").style.display = "none";
+                            function showcomments() {
+                                var evt = document.createEvent("MouseEvents");
+                                evt.initEvent("click", true, true);
+                                document.getElementById("showComment").dispatchEvent(evt);
+                                document.getElementById("showComment").style.display = "none";
 
-                            var dsqjs = new DisqusJS({
-                                shortname: 'liqimoreblog',
-                                siteName: "Ricky's Blog",
-                                // identifier: '',
-                                // url: '',
-                                // title: '',
-                                // api: 'https://disqus.liqitry.workers.dev/api/',
-                                apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
-                                admin: 'liqimore',
-                                adminLabel: 'Admin',
-                                nesting: 6
-                            });
-                        }
-                            </script>
+                                var urlnow;
+                                url = window.location.href;
+                                var dsqjs = new DisqusJS({
+                                    shortname: 'liqimoreblog',
+                                    siteName: "Ricky's Blog",
+                                    identifier: urlnow,
+                                    url: urlnow,
+                                    apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
+                                    admin: 'liqimore',
+                                    adminLabel: 'Admin'
+                                });
+                            }
+                        </script>
                     </div>
                 {% endif %}
             </div>
