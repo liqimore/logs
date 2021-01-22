@@ -8,8 +8,8 @@ categories: [WesternU, hacking]
 comments: true
 ---
 
-* Kramdown table of contents
-{:toc .toc}v
+
+{:toc .toc}
 
 # Web Exploitation
 ## dont-use-client-side
