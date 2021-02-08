@@ -14,7 +14,7 @@ Starting from assignment 2, I'll using a kali linux VM to do the homework.
 
 ---
 
-{:toc}
+{:toc .toc}
 
 
 ## Question 1 - File Permissions
