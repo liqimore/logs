@@ -14,7 +14,7 @@ Starting from assignment 2, I'll using a kali linux VM to do the homework.
 
 ---
 
-* Kramdown table of contents
+* table of contents
 {:toc .toc}
 
 
@@ -101,7 +101,7 @@ So for the questions:
 
 
 
- ## Question 3 - Basics of Computer Memory
+## Question 3 - Basics of Computer Memory
 
 **What I understand about memory**: 
 
