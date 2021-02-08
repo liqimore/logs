@@ -9,7 +9,8 @@ comments: true
 ---
 
 
-[toc]
+{:toc}
+
 
 # Web Exploitation
 ## dont-use-client-side
