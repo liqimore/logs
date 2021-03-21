@@ -10,7 +10,8 @@ comments: true
 
 Sudo Heap-based Buffer Overflow (CVE-2021-3156)
 
-[toc]
+* table of contents
+{:toc .toc}
 
 # Background
 
