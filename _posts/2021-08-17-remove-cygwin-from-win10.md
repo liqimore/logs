@@ -18,4 +18,4 @@ comments: true
 
 4. run `del PATH_TO_CYGWIN`.
 
-5. check if the files are deleted and delete the residual files.
+5. check if the files are deleted and delete the residual files. 
