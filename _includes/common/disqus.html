@@ -22,7 +22,8 @@
             },
             error: function () {
                 $('#commentLoadError').css("display", "inline-block");
-            }
+            },
+            timeout: 3000
         });
 
         $('.comments .show-hidden').on('click', function () {
@@ -44,17 +45,3 @@
         }
     });
 </script>
-
- <!-- <div id="vcomments"></div> -->
-    <!-- <script>
-        new Valine({
-            el: '#vcomments',
-            appId: 'pyWhzTo9N1oGroPrh7paaLtw-MdYXbMMI',
-            appKey: 'fLUSdo8hpeGnTgEYDbnpek6m',
-            placeholder: 'You have something to say?',
-            notify: true,
-            verify: true,
-            lang: 'en',
-            visitor: true
-        })
-    </script> -->
