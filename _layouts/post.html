@@ -86,19 +86,11 @@ layout: blog
                                 evt.initEvent("click", true, true);
                                 document.getElementById("showComment").dispatchEvent(evt);
                                 document.getElementById("showComment").style.display = "none";
-
-                                // var dsqjs = new DisqusJS({
-                                //     shortname: 'liqimoreblog',
-                                //     siteName: "Ricky's Blog",
-                                //     identifier: "{{ page.url }}",
-                                //     url: "{{ page.url | absolute_url }}",
-                                //     apikey: 'JBKMD14vKfQ1zAJbU1sYVGXSGm6kwRanHjzRQr19n2kVWUu9jEsuxtPwBtsoFyTQ',
-                                //     admin: 'liqimore',
-                                //     adminLabel: 'Admin',
-                                //     nesting: 6
-                                // });
                             }
                         </script>
+                    </div>
+                    <div id="commentLoadError" style="display: none; color: red;">
+                        <span>Comment Load Error, Please verify your network. (需要科学上网).</span>
                     </div>
                 {% endif %}
             </div>

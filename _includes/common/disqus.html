@@ -19,6 +19,9 @@
                     btnText = '{{ site.data.i18n[site.lang].show_comments }} (' + result.response[0].posts + ')';
                     $('.comments .show-hidden').html(btnText);
                 }
+            },
+            error: function () {
+                $('#commentLoadError').css("display", "inline-block");
             }
         });
 
