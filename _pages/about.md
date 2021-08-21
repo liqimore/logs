@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: About Me
 permalink: /about/
 date: 2021-08-21

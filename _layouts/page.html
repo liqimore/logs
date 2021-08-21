@@ -1,83 +1,30 @@
 ---
 layout: blog
 ---
-<article class="unit-article layout-post">
+<article class="unit-article layout-page">
     <div class="unit-inner unit-article-inner">
-        <div itemscope itemtype="http://schema.org/Article" class="content">
+        <div class="content">
             <header>
                 <div class="unit-head">
                     <div class="unit-inner unit-head-inner">
-                        <h1 class="entry-title" itemprop="name">{{ page.title }}</h1>
+                        <h1 class="entry-title">{{ page.header }}</h1>
                     </div>
                 </div>
             </header>
+
             <div class="bd article-content">
                 <div class="entry-content">
-                    <div class="meta">
-                        <p class="date-publish">
-                            {{ site.data.i18n[site.lang].published }}:
-                            <time itemprop="datePublished" class="date-pub {% if page.last_updated == null %}updated{% endif %}"
-                                title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time>
-                            by
-                            <a class="author" href="/" rel="author" title="{{ site.data.i18n[site.lang].show_author }}">
-                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                                    <span itemprop="name">{% if page.author == null %}{{ site.author.name }}{% else %}{{ page.author }}{% endif %}</span>
-                                </span>
-                            </a>
-                             <!-- Viewer:  -->
-                            <!-- <script>
-                                var path = window.location.pathname;
-                                var html = "<span id='" + path +"' class='leancloud-visitors' ><i class='leancloud-visitors-count'></i></span>";
-                                document.write(html);
-                            </script> -->
-
-                            {% if site.blog.cc_license and site.blog.cc_license_image %}
-                                <a class="license-icon" rel="license" href="{{ site.blog.cc_license }}" target="_blank" title="{{ site.data.i18n[site.lang].show_license }}">
-                                    <img alt="Creative Commons Licence" style="border-width:0" src="{{ site.blog.cc_license_image | relative_url }}"  height="16" width="80"/>
-                                </a>
-                            {% endif %}
-                            {% if page.last_updated %}
-                                ({{ site.data.i18n[site.lang].last_updated}}:
-                                <time class="date-updated updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }}</time>)
-                            {% endif %}
-                        </p>
-                    </div>
-                    <div itemprop="articleBody">
-                        {{ content }}
-                    </div>
+                    {{ content }}
                 </div>
             </div>
+
             <footer class="unit-foot">
                 <div class="unit-inner unit-foot-inner">
-                    <div class="post-buttons">
-                        <a class="internal gotop" href="#page" title="{{ site.data.i18n[site.lang].back_to_top }}">{{ site.data.i18n[site.lang].back_to_top }}</a>
-                        {% if site.addthis_public_id %}
-                            {% include common/addthis.html %}
-                        {% endif %}
-                    </div>
+                    <p>
+                        <a class="internal gotop" href="#page">{{ site.data.i18n[site.lang].back_to_top }}</a>
+                    </p>
                 </div>
             </footer>
-            <div class="misc-content">
-                {% if site.disqus.shortname and page.comments != false %}
-                    {% include common/disqus.html %}
-                    <div class="comments">
-                        <button id="showComment" onclick="showcomments()" class="center-block show-hidden" title="{{ site.data.i18n[site.lang].show_comments }}" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
-                        <div id="disqus_thread"></div>
-                        <!-- disqusjs reverse proxy -->
-                        <script>
-                            function showcomments() {
-                                var evt = document.createEvent("MouseEvents");
-                                evt.initEvent("click", true, true);
-                                document.getElementById("showComment").dispatchEvent(evt);
-                                document.getElementById("showComment").style.display = "none";
-                            }
-                        </script>
-                    </div>
-                    <div id="commentLoadError" style="display: none; color: red;">
-                        <span>Comment Load Error, Please verify your network. (需要科学上网).</span>
-                    </div>
-                {% endif %}
-            </div>
         </div>
     </div>
 </article>
