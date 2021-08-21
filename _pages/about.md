@@ -1,7 +1,11 @@
 ---
 layout: page
 title: About Me
-permalink: /about/
+permalink: /about
+date: 2021-08-21
+comments: true
 ---
 
-this is about me.  
+> Updated: 2021/08/21.
+
+Placeholder
