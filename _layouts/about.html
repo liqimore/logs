@@ -1,0 +1,47 @@
+---
+layout: blog
+---
+<article class="unit-article layout-post">
+    <div class="unit-inner unit-article-inner">
+        <div itemscope itemtype="http://schema.org/Article" class="content">
+            <header>
+                <div class="unit-head">
+                    <div class="unit-inner unit-head-inner">
+                        <h1 class="entry-title" itemprop="name">{{ page.title }}</h1>
+                    </div>
+                </div>
+            </header>
+            <div class="bd article-content">
+                <div class="entry-content">
+                    <div itemprop="articleBody">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            <footer class="unit-foot">
+                <div class="misc-content">
+                    {% if site.disqus.shortname and page.comments != false %}
+                        {% include common/disqus.html %}
+                        <div class="comments">
+                            <button id="showComment" onclick="showcomments()" class="center-block show-hidden" title="{{ site.data.i18n[site.lang].show_comments }}" data-disqus-url="{{ page.url | absolute_url }}">{{ site.data.i18n[site.lang].show_comments }}</button>
+                            <div id="disqus_thread"></div>
+                            <!-- disqusjs reverse proxy -->
+                            <script>
+                                function showcomments() {
+                                    var evt = document.createEvent("MouseEvents");
+                                    evt.initEvent("click", true, true);
+                                    document.getElementById("showComment").dispatchEvent(evt);
+                                    document.getElementById("showComment").style.display = "none";
+                                }
+                            </script>
+                        </div>
+                        <div id="commentLoadError" style="display: none; color: red;">
+                            <span>Comment Load Error, Please verify your network. (需要科学上网).</span>
+                        </div>
+                    {% endif %}
+                </div>
+            </footer>
+            
+        </div>
+    </div>
+</article>
