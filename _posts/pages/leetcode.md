@@ -1,0 +1,14 @@
+---
+layout: about
+title: "Leetcode Problems"
+date: 2021-08-22
+permalink: /leetcode/
+comments: true
+---
+
+## Solved Problem List
+
+|---
+|Id|Problem|Solution
+|:-|:-|:-
+|1|[Two Sum] (https://leetcode-cn.com/problems/two-sum/) |[Solved] (<https://liqimore.com/2018/quick-kramdown-demo/>)
