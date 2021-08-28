@@ -2,7 +2,7 @@
 layout: post
 title: "1. Two Sum"
 description: "1. Two Sum in leetcode"
-date: 2021-08-26
+date: 2021-08-27
 tags: [leetcode, job, TwoSum]
 categories: [job]
 comments: true
